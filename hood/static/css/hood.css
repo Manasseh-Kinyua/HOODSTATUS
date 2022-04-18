@@ -17,10 +17,13 @@ nav {
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     margin: auto;
     align-items: center;
     background: rgb(243, 239, 239);
+    position: fixed;
+    top: 0;
+    z-index: 2;
 }
 
 nav ul {
@@ -45,6 +48,42 @@ nav ul a {
     color: rgb(27, 72, 72);
     font-weight: 500;
     font-size: 2rem;
+}
+
+.hero {
+    margin-top: 10rem;
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    flex: 1 1 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-text a {
+    background: darkcyan;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 1rem 4rem;
+    font-weight: 900;
+    margin-top: 1rem;
+}
+
+.hero-img {
+    flex: 1 1 20rem;
+}
+
+.hero-img img {
+    width: 100%;
 }
 
 

@@ -1,4 +1,15 @@
 {% extends 'hood/base.html' %}
+{% load static %}
+
 {% block content %}
-<h1>welcome</h1>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Welcome to <span style="font-family: 'Pattaya', sans-serif; font-weight: 500; font-size: 1.5rem; color: brown;">HoodYangu</span></h1>
+        <h3>Where we always keep you up to date with all that is happening within your neighborhood. <br> Join us now and nothing will ever pass you.</h3>
+        <a href="">View Hoods</a>
+    </div>
+    <div class="hero-img">
+        <img src="{% static 'img/hood.svg' %}" alt="">
+    </div>
+</section>
 {% endblock %}
