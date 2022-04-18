@@ -10,3 +10,4 @@ class Neighborhood(models.Model):
     description = models.TextField(null=True)
     occupants = models.IntegerField(default=0)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='photos/', null=True)

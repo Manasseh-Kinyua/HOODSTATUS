@@ -103,6 +103,8 @@ nav ul a {
 .card {
     flex: 1 1 20rem;
     margin: 1rem;
+    border: 1px solid grey;
+    border-radius: 0.1rem;
 }
 
 
