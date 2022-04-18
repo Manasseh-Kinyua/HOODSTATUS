@@ -91,6 +91,10 @@ nav ul a {
     min-height: 90vh;
 }
 
+/* .hood-container a {
+    background: black;
+} */
+
 .hood-cards {
     width: 90%;
     margin: auto;

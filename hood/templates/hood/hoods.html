@@ -3,8 +3,20 @@
 
 {% block content %}
 <div class="hood-container">
+    <a style="background: green; color: aliceblue; padding: 1rem 3rem; margin: 2rem; text-decoration: none; font-weight: 800;" href="">
+        Add Hood
+    </a>
     <section class="hood-cards">
+        {% for hood in hoods %}
         <div class="card">
+            <div class="card-icon">
+                <img style="width: 100%; min-height: 20rem; max-height: 20rem;" src="{{hood.photo.url}}" alt="">
+            </div>
+            <h4>Travel</h4>
+            <p>Travel in over 250 countries with no effort.</p>
+        </div>
+        {% endfor %}
+        <!-- <div class="card">
             <div class="card-icon">
                 <img style="width: 100%;" src="{% static 'img/coq.jpg' %}" alt="">
             </div>
@@ -45,7 +57,7 @@
             </div>
             <h4>Travel</h4>
             <p>Travel in over 250 countries with no effort.</p>
-        </div>
+        </div> -->
     </section>
 </div>
 {% endblock %}
