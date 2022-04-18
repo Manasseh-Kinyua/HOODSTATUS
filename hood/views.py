@@ -12,3 +12,10 @@ def hoods(request):
         "hoods": hoods,
     }
     return render(request, 'hood/hoods.html', context)
+
+def hood(request, pk):
+    hood = Neighborhood.objects.get(id=pk)
+    context = {
+        "hood": hood
+    }
+    return render(request, 'hood/hood.html', context)

@@ -12,8 +12,12 @@
             <div class="card-icon">
                 <img style="width: 100%; min-height: 20rem; max-height: 20rem;" src="{{hood.photo.url}}" alt="">
             </div>
-            <h4>Travel</h4>
-            <p>Travel in over 250 countries with no effort.</p>
+            <div card-text>
+                <h4>{{ hood.name }}</h4>
+                <p>{{ hood.location }}</p>
+                <p>{{ hood.occupants }} occupants</p>
+                <a href="{% url 'hood' hood.id %}">Details</a>
+            </div>
         </div>
         {% endfor %}
         <!-- <div class="card">
