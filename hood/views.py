@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Neighborhood
+from .forms import HoodForm
 
 # Create your views here.
 def index(request):
@@ -19,3 +20,15 @@ def hood(request, pk):
         "hood": hood
     }
     return render(request, 'hood/hood.html', context)
+
+def add_hood(request):
+    form = HoodForm()
+    if request.method =='POST':
+        form = HoodForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('hoods')
+    context = {
+        "form": form
+    }
+    return render(request, 'hood/hood_form.html', context)
