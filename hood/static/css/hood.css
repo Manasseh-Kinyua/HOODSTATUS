@@ -7,3 +7,49 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+/* .main-head {
+    border-bottom: 0.1rem solid black;
+} */
+
+nav {
+    min-height: 10vh;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    background: rgb(243, 239, 239);
+}
+
+nav ul {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: black;
+}
+
+#logo {
+    flex: 1 1 40rem;
+    font-family: 'Pattaya', sans-serif;
+    color: rgb(27, 72, 72);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width: 936px) {
+    nav {
+        text-align: center;
+    }
+}
