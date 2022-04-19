@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Neighborhood, Profile, Post
-from .forms import HoodForm
+from .forms import HoodForm, PostForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
@@ -90,5 +90,17 @@ def profile(request):
     return render(request, 'hood/profile.html', context)
 
 def add_post(request):
-    context = {}
+    form = PostForm()
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('hoods')
+    context = {
+        "form": form
+    }
     return render(request, 'hood/add_post.html', context)
+
+def posts(request):
+    context = {}
+    return render(request, 'hood/posts.html', context)

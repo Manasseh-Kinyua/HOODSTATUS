@@ -2,9 +2,10 @@
 {% load static %}
 
 {% block content %}
-<form action="" method="POST">
+<form style="margin-top: 10rem;" action="" method="POST">
     {% csrf_token %}
 
-    <input type="sulbmit">
+    {{ form.as_p }}
+    <input type="submit">
 </form>
 {% endblock %}
