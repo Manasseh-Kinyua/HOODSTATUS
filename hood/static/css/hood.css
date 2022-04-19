@@ -111,6 +111,30 @@ nav ul a {
     border-radius: 0.1rem;
 }
 
+.details-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+}
+
+.details-container .hood-img{
+    flex: 1 1 30rem;
+    padding: 1rem;
+}
+
+.details-container .details{
+    flex: 1 1 30rem;
+    padding: 2rem;
+}
+
+.details-container img {
+    width: 100%;
+}
+
 
 @media screen and (max-width: 936px) {
     nav {
