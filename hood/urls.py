@@ -10,7 +10,8 @@ urlpatterns = [
     path('', views.index, name = 'index'),
     path('hoods/', views.hoods, name = 'hoods'),
     path('hood/<str:pk>/', views.hood, name = 'hood'),
-    path('add-hood/', views.add_hood, name = 'add')
+    path('add-hood/', views.add_hood, name = 'add'),
+    path('profile/', views.profile, name = 'profile'),
 ]
 
 if settings.DEBUG:
