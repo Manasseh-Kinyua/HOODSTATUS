@@ -4,6 +4,7 @@ from .forms import HoodForm
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def loginpage(request):
@@ -25,6 +26,10 @@ def loginpage(request):
     context = {}
     return render(request, 'hood/login_register.html', context)
 
+def logoutUser(request):
+    logout(request)
+    return redirect('index')
+
 def index(request):
     context = {}
     return render(request, 'hood/index.html', context)
@@ -36,6 +41,7 @@ def hoods(request):
     }
     return render(request, 'hood/hoods.html', context)
 
+@login_required(login_url='/login')
 def hood(request, pk):
     hood = Neighborhood.objects.get(id=pk)
     context = {
