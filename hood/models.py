@@ -35,7 +35,7 @@ class Business(models.Model):
 
 class Post(models.Model):
     message = models.TextField()
-    image = models.ImageField(upload_to='photos/', null=True)
+    image = models.ImageField(upload_to='photos/', null=True, blank=True)
     create = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     hood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE)

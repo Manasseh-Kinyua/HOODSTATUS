@@ -81,3 +81,7 @@ def add_hood(request):
         "form": form
     }
     return render(request, 'hood/hood_form.html', context)
+
+def profile(request):
+    context = {}
+    return render(request, 'hood/profile.html', context)
