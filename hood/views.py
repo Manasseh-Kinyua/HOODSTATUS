@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def loginpage(request):
+    page = 'login'
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -23,12 +24,17 @@ def loginpage(request):
 
         else:
             messages.error(request, 'Username or Password does not exist')
-    context = {}
+    context = {
+        "page": page
+    }
     return render(request, 'hood/login_register.html', context)
 
 def logoutUser(request):
     logout(request)
     return redirect('index')
+
+def registerUser(request):
+    return render(request, 'hood/login_register.html')
 
 def index(request):
     context = {}
