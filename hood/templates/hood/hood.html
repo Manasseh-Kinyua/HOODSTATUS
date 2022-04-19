@@ -19,4 +19,13 @@
     </div>
 </div>
 </section>
+<section style="text-align: center;" class="post-container">
+    <h1 style="font-weight: 900;">POSTS</h1>
+    {% for post in posts %}
+    <div class="post">
+        <p>{{ post.message }}</p>
+        <p>Posted by <span style="color: white; background: red; font-weight: 900;">{{ post.user }}</span> <span>{{ post.create|timesince }}</span></p>
+    </div>
+    {% endfor %}
+</section>
 {% endblock %}

@@ -65,8 +65,10 @@ def hoods(request):
 @login_required(login_url='/login')
 def hood(request, pk):
     hood = Neighborhood.objects.get(id=pk)
+    posts = Post.objects.all()
     context = {
-        "hood": hood
+        "hood": hood,
+        "posts": posts,
     }
     return render(request, 'hood/hood.html', context)
 

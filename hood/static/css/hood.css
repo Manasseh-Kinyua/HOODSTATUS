@@ -111,6 +111,13 @@ nav ul a {
     border-radius: 0.1rem;
 }
 
+.card-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+}
+
 .details-container {
     width: 90%;
     margin: auto;
@@ -133,6 +140,15 @@ nav ul a {
 
 .details-container img {
     width: 100%;
+}
+
+.post-container {
+    width: 60%;
+    margin: auto;
+}
+
+.post {
+    padding: 2rem;
 }
 
 
