@@ -3,6 +3,10 @@ from .models import Neighborhood
 from .forms import HoodForm
 
 # Create your views here.
+def loginpage(request):
+    context = {}
+    return render(request, 'hood/login_register.html', context)
+
 def index(request):
     context = {}
     return render(request, 'hood/index.html', context)
