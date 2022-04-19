@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Neighborhood
+from .models import Neighborhood, Profile
 from .forms import HoodForm
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -83,5 +83,8 @@ def add_hood(request):
     return render(request, 'hood/hood_form.html', context)
 
 def profile(request):
-    context = {}
+
+    context = {
+        'profile': Profile.objects.filter(user= request.user)
+    }
     return render(request, 'hood/profile.html', context)

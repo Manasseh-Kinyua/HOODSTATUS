@@ -2,5 +2,6 @@
 {% load static %}
 
 {% block content %}
-
+<p class="" style="margin-top: 20rem;">{{ user.username }}</p>
+<img src="{{ user.profile.image.url }}" alt="">
 {% endblock %}

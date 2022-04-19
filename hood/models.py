@@ -12,6 +12,9 @@ class Profile(models.Model):
     bio = models.TextField(null=True)
     hood = models.ForeignKey('Neighborhood', on_delete=models.CASCADE, null=True)
 
+    def __str__(self):
+        return self.user.username
+
 
 class Neighborhood(models.Model):
     name = models.CharField(max_length=200)
